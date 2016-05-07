@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{8ed49aa6-da55-4081-a23c-ff5908083fa1}</ProjectGuid>
+    <avrdevice>ATmega168A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>Bot1</AssemblyName>
+    <Name>Bot1</Name>
+    <RootNamespace>Bot1</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.19.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <preserveEEPROM>true</preserveEEPROM>
+    <avrtool>com.atmel.avrdbg.tool.ispmk2</avrtool>
+    <avrtoolinterface>ISP</avrtoolinterface>
+    <com_atmel_avrdbg_tool_ispmk2>
+      <ToolOptions>
+        <InterfaceProperties>
+          <IspClock>125000</IspClock>
+        </InterfaceProperties>
+        <InterfaceName>ISP</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.ispmk2</ToolType>
+      <ToolNumber>000200137180</ToolNumber>
+      <ToolName>AVRISP mkII</ToolName>
+    </com_atmel_avrdbg_tool_ispmk2>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>C:\Users\af.rengifo239\Desktop\SW\codeBot\Bot1</Value>
+            <Value>C:\Users\af.rengifo239\Desktop\SW\codeBot\Bot1\Bot1</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.LibrarySearchPaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>C:\Users\af.rengifo239\Desktop\SW\codeBot\Bot1</Value>
+            <Value>C:\Users\af.rengifo239\Desktop\SW\codeBot\Bot1\Bot1</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.LibrarySearchPaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AvoidObstacles.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Controllers\AvoidObstacles.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Controllers\LightSearch.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Controllers\LightSearch.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ExternalModules\AnalogToDigital.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ExternalModules\AnaolgToDigital.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Controllers\GoToGoal.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Controllers\GoToGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Controllers\Supervisor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Controllers\Supervisor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Odometry\Dynamics.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Odometry\Dynamics.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Odometry\Encoders.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Odometry\Encoders.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="IRSensors\adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="IRSensors\adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="IRSensors\IRSensors.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="IRSensors\IRSensors.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Driver\Motors.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Driver\Motors.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Outputs\LedRGB.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Outputs\LedRGB.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Outputs\UART.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Outputs\UART.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Wireless\nodesAddres.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Wireless\nrf24l01.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Wireless\nrf24l01.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Wireless\nrf24l01registers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Wireless\spi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Wireless\spi.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IRSensors" />
+    <Folder Include="Driver" />
+    <Folder Include="Controllers" />
+    <Folder Include="ExternalModules" />
+    <Folder Include="Wireless" />
+    <Folder Include="Odometry" />
+    <Folder Include="Outputs" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
